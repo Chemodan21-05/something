@@ -1,1 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: grey;
+    }
+    table {
+      background-color: blue; /* Замініть 'bl' на 'blue', щоб задати правильний колір */
+      border-collapse: collapse;
+      float: left; /* Додано стиль для вирівнювання таблиці зліва */
+    }
+    td {
+      border: 1px solid black;
+      width: 80px;
+      height: 30px;
+    }
+    td.no-border {
+      border: none;
+    }
+    .form-container {
+      float: left; /* Додано стиль для вирівнювання форми зправа */
+      margin-left: 40px; /* Додано відступ між таблицею і формою */
+    }
+  </style>
+  <script>
+    function validateForm() {
+      var password = document.getElementById("password").value;
+      var confirmPassword = document.getElementById("confirm-password").value;
+      var submitButton = document.getElementById("submit-button");
+      if (password === confirmPassword)
+      {submitButton.disabled = false;} else {submitButton.disabled = true;}
+      return true;}
+  </script>
+</head>
+<body>
+<table>
+  <tr>
+    <td>Час/День</td>
+    <td>Пн</td>
+    <td>Вт</td>
+    <td>Ср</td>
+    <td>Чт</td>
+    <td>Пт</td>
+    <td>Сб</td>
+  </tr>
+  <tr>
+    <td>8:30-9:15</td>
+    <td>Предмет1</td>
+    <td>Предмет3</td>
+    <td>Предмет4</td>
+    <td>Предмет3</td>
+    <td>Предмет5</td>
+    <td>Предмет5</td>
+  </tr>
+  <tr>
+    <td>9:20-10:05</td>
+    <td>Предмет1</td>
+    <td>Предмет3</td>
+    <td>Предмет4</td>
+    <td>Предмет3</td>
+    <td>Предмет5</td>
+    <td>Предмет5</td>
+  </tr>
+  <tr>
+    <td>10:25-11:10</td>
+    <td>Предмет2</td>
+    <td>Предмет1</td>
+    <td>Ср</td>
+    <td>Предмет1</td>
+    <td>Предмет3</td>
+    <td>Предмет1</td>
+  </tr>
+  <tr>
+    <td>11:15-12:00</td>
+    <td>Предмет2</td>
+    <td>Предмет1</td>
+    <td>Ср</td>
+    <td>Предмет1</td>
+    <td>Предмет3</td>
+    <td>Предмет1</td>
+  </tr>
+  <tr>
+    <td>12:20-13:05</td>
+    <td>Предмет2</td>
+    <td>Предмет4</td>
+    <td>Предмет1</td>
+    <td>Предмет2</td>
+    <td>Предмет1</td>
+    <td>Ср</td>
+  </tr>
+  <tr>
+    <td>13:10-13:55</td>
+    <td>Предмет2</td>
+    <td>Предмет4</td>
+    <td>Предмет1</td>
+    <td>Предмет2</td>
+    <td>Предмет1</td>
+    <td>Ср</td>
+  </tr>
+</table>
 
+  <!-- Форма у правій колонці -->
+  <div class="form-container">
+    <form onsubmit="return validateForm()">
+      <label for="username">Ім'я користувача:</label>
+      <input type="text" id="username" name="username" required>
+      <br>
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" required>
+      <br>
+      <label for="confirm-password">Підтвердження паролю:</label>
+      <input type="password" id="confirm-password" name="confirm-password" required onkeyup="validateForm()">
+      <br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <br>
+      <input type="submit" value="Відправити" id="submit-button" disabled>
+      <br>
+    </form>
+  </div>
+</body>
+</html>
