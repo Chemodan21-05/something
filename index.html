@@ -5,17 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      background-color: #000000; /* Light grey background */
+      background-color: #3D0000; /* Light grey background */
       font-family: Arial, sans-serif; /* Use a common font */
       margin: 0;
       padding: 0;
       display: flex; /* Use flex to create a two-column layout */
       justify-content: space-between; /* Spacing between columns */
     }
-    .column {
-      flex: 1; /* Equal width for columns */
-      padding: 20px; /* Add padding for spacing */
+    .header {
+      position: fixed; /* Закрепите хедер в верхней части экрана */
+      top: 0; /* Расположите его в самом верху */
+      width: 100%; /* Займите всю ширину экрана */
+      padding: 20px;
+      text-align: center;
+      background-color: #000000;
     }
+    .header img {
+      width: 50px;
+      height: 50px;
+    }
+    .header h1 {
+      color: #fff;
+    }
+    .column {
+      flex: 1;
+      padding: 20px;
+      margin-top: 150px; /* Высота хедера + отступ */
+    }
+
     table {
       background-color: #3498db; /* Blue background */
       border-collapse: collapse;
@@ -63,22 +80,9 @@
       cursor: not-allowed;
     }
     /* Added styles for the header */
-    .header {
-      flex: 1; /* Take up the entire width of the header */
-      padding: 20px;
-      text-align: center;
-      background-color: #3498db;
-    }
-    .header img {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      display: block;
-      margin: 0 auto 10px;
-    }
-    .header h1 {
-      color: #fff;
-    }
+
+
+
   </style>
   <script>
     function validateForm() {
@@ -97,8 +101,8 @@
 <body>
   <div class="header">
     <!-- Placeholder image (200x200) -->
-    <img src="logo.jpg" alt="Placeholder Image">
-    <h1>Your Header Text</h1>
+    <img src="logo.jpg" alt="logo">
+    <h1>Розклад та реєстрація</h1>
   </div>
   <div class="column">
 
@@ -174,14 +178,14 @@
       <label for="username">Ім'я користувача:</label>
       <input type="text" id="username" name="username" required>
       <br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <br>
       <label for="password">Пароль:</label>
       <input type="password" id="password" name="password" required>
       <br>
       <label for="confirm-password">Підтвердження паролю:</label>
       <input type="password" id="confirm-password" name="confirm-password" required onkeyup="validateForm()">
-      <br>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
       <br>
       <input type="submit" value="Відправити" id="submit-button" disabled>
       <br>
