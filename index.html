@@ -4,82 +4,99 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      background-color: #3D0000; /* Light grey background */
-      font-family: Arial, sans-serif; /* Use a common font */
-      margin: 0;
-      padding: 0;
-      display: flex; /* Use flex to create a two-column layout */
-      justify-content: space-between; /* Spacing between columns */
-    }
-    .header {
-      position: fixed; /* Закрепите хедер в верхней части экрана */
-      top: 0; /* Расположите его в самом верху */
-      width: 100%; /* Займите всю ширину экрана */
-      padding: 20px;
-      text-align: center;
-      background-color: #000000;
-    }
-    .header img {
-      width: 50px;
-      height: 50px;
-    }
-    .header h1 {
-      color: #fff;
-    }
-    .column {
-      flex: 1;
-      padding: 20px;
-      margin-top: 150px; /* Высота хедера + отступ */
-    }
+  body {
+    background-color: #3D0000;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
 
-    table {
-      background-color: #3498db; /* Blue background */
-      border-collapse: collapse;
-      width: 100%; /* Make the table width responsive */
-    }
-    th, td {
-      border: 1px solid #000;
-      padding: 8px;
-      text-align: center;
-    }
-    th {
-      background-color: #2980b9; /* Darker blue for header */
-      color: #fff;
-    }
-    .form-container {
-      background-color: #ecf0f1; /* Light grey background for form */
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      padding: 20px;
-      width: 300px; /* Adjust the width as needed */
-    }
-    label {
-      display: block;
-      margin-bottom: 5px;
-    }
-    input[type="text"],
-    input[type="password"],
-    input[type="email"] {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border: 1px solid #ccc;
-      border-radius: 3px;
-    }
-    input[type="submit"] {
-      background-color: #3498db;
-      border: none;
-      color: #fff;
-      cursor: pointer;
-      padding: 10px 20px;
-      border-radius: 3px;
-    }
-    input[type="submit"]:disabled {
-      background-color: #ccc; /* Grey out the button when disabled */
-      cursor: not-allowed;
-    }
-    /* Added styles for the header */
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0; /* Добавьте left: 0; чтобы фото было слева от текста */
+    width: 100%;
+    padding: 20px;
+    text-align: left; /* Изменим на left */
+    background-color: #000000;
+    display: flex; /* Добавим flex для размещения фото и текста рядом */
+    align-items: center; /* Выравниваем содержимое по вертикали */
+  }
+
+  .header img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px; /* Отступ справа от фото */
+  }
+
+  .header h1 {
+    color: #FF0000; /* Изменяем цвет текста h1 */
+    margin: 0; /* Убираем отступы вокруг текста */
+  }
+
+  .column {
+    flex: 1;
+    padding: 20px;
+    margin-top: 100px; /* Уменьшим отступ, чтобы было ближе к хедеру */
+  }
+
+  table {
+    background-color: #950101; /* Изменяем цвет фона таблицы */
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th, td {
+    border: 2px solid #FF0000; /* Изменяем толщину и цвет обводки */
+    padding: 8px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #950101; /* Изменяем цвет фона заголовка */
+    color: #fff;
+  }
+
+  .form-container {
+    background-color: #950101; /* Изменяем цвет фона формы */
+    border: 2px solid #FF0000; /* Изменяем цвет и толщину обводки формы */
+    border-radius: 5px;
+    padding: 20px;
+    width: 300px;
+    color: #000000; /* Изменяем цвет текста в форме */
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #FF0000; /* Изменяем цвет и толщину обводки полей ввода */
+    border-radius: 3px;
+  }
+
+  input[type="submit"] {
+    background-color: #FF0000; /* Изменяем цвет кнопки */
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 3px;
+  }
+
+  input[type="submit"]:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    color: #000000; /* Изменяем цвет кнопки в неактивном состоянии */
+  }
 
 
 
