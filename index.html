@@ -26,8 +26,8 @@
   }
 
   .header img {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     margin-right: 10px; /* Отступ справа от фото */
   }
 
@@ -39,7 +39,7 @@
   .column {
     flex: 1;
     padding: 20px;
-    margin-top: 100px; /* Уменьшим отступ, чтобы было ближе к хедеру */
+    margin-top: 150px; /* Уменьшим отступ, чтобы было ближе к хедеру */
   }
 
   table {
@@ -55,18 +55,23 @@
   }
 
   th {
-    background-color: #950101; /* Изменяем цвет фона заголовка */
+    background-color: #000000; /* Изменяем цвет фона заголовка */
     color: #fff;
   }
 
+    td {
+      background-color: #950101; /* Изменяем цвет фона заголовка */
+    }
   .form-container {
-    background-color: #950101; /* Изменяем цвет фона формы */
-    border: 2px solid #FF0000; /* Изменяем цвет и толщину обводки формы */
-    border-radius: 5px;
-    padding: 20px;
-    width: 300px;
-    color: #000000; /* Изменяем цвет текста в форме */
-  }
+     background-color: #950101; /* Изменяем цвет фона формы */
+     border: 2px solid #FF0000; /* Изменяем цвет и толщину обводки формы */
+     border-radius: 5px;
+     padding: 40px;
+     max-width: 300px; /* Устанавливаем максимальную ширину формы */
+     margin-left: auto; /* Помещаем форму вправо */
+     margin-right: 20px; /* Добавляем небольшой отступ справа */
+     color: #000000; /* Изменяем цвет текста в форме */
+   }
 
   label {
     display: block;
@@ -102,17 +107,20 @@
 
   </style>
   <script>
-    function validateForm() {
-      var password = document.getElementById("password").value;
-      var confirmPassword = document.getElementById("confirm-password").value;
-      var submitButton = document.getElementById("submit-button");
-      if (password === confirmPassword) {
-        submitButton.disabled = false;
-      } else {
-        submitButton.disabled = true;
-      }
-      return true;
-    }
+  function validateForm() {
+  var password = document.getElementById("password").value;
+  var confirmPassword = document.getElementById("confirm-password").value;
+  var submitButton = document.getElementById("submit-button");
+  if (password === confirmPassword) {
+    submitButton.disabled = false;
+    return true; // Вернуть true только если пароли совпадают
+  } else {
+    submitButton.disabled = true;
+    return false; // Вернуть false если пароли не совпадают
+  }
+}
+
+
   </script>
 </head>
 <body>
@@ -125,16 +133,16 @@
 
 <table>
   <tr>
-    <td>Час/День</td>
-    <td>Пн</td>
-    <td>Вт</td>
-    <td>Ср</td>
-    <td>Чт</td>
-    <td>Пт</td>
-    <td>Сб</td>
+    <th>Час/День</th>
+    <th>Пн</th>
+    <th>Вт</th>
+    <th>Ср</th>
+    <th>Чт</th>
+    <th>Пт</th>
+    <th>Сб</th>
   </tr>
   <tr>
-    <td>8:30-9:15</td>
+    <th>8:30-9:15</th>
     <td>Предмет1</td>
     <td>Предмет3</td>
     <td>Предмет4</td>
@@ -143,7 +151,7 @@
     <td>Предмет5</td>
   </tr>
   <tr>
-    <td>9:20-10:05</td>
+    <th>9:20-10:05</th>
     <td>Предмет1</td>
     <td>Предмет3</td>
     <td>Предмет4</td>
@@ -152,7 +160,7 @@
     <td>Предмет5</td>
   </tr>
   <tr>
-    <td>10:25-11:10</td>
+    <th>10:25-11:10</th>
     <td>Предмет2</td>
     <td>Предмет1</td>
     <td>Ср</td>
@@ -161,7 +169,7 @@
     <td>Предмет1</td>
   </tr>
   <tr>
-    <td>11:15-12:00</td>
+    <th>11:15-12:00</th>
     <td>Предмет2</td>
     <td>Предмет1</td>
     <td>Ср</td>
@@ -170,7 +178,7 @@
     <td>Предмет1</td>
   </tr>
   <tr>
-    <td>12:20-13:05</td>
+    <th>12:20-13:05</th>
     <td>Предмет2</td>
     <td>Предмет4</td>
     <td>Предмет1</td>
@@ -179,7 +187,7 @@
     <td>Ср</td>
   </tr>
   <tr>
-    <td>13:10-13:55</td>
+    <th>13:10-13:55</th>
     <td>Предмет2</td>
     <td>Предмет4</td>
     <td>Предмет1</td>
